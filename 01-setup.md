@@ -23,8 +23,8 @@ Cursor is a VS-Code–based editor with first-class AI support.
   - integrated file browser
   - built-in AI that understands your codebase, explains code, and helps you write code
 
-> If you already use VS Code confidently or another editor, you can keep it.  
-> For everyone else: Cursor is the shortest path to productivity in 2026.
+> [!NOTE]
+> If you already use VS Code confidently or another editor, you can keep it. For everyone else: Cursor is the shortest path to productivity in 2026.
 ---
 
 ## Platform-specific setup
@@ -78,7 +78,7 @@ Inside Cursor, you are presented with a file browser on the left side of the scr
 
 To get started, hover over the file browser on the left hand side and click on the new file icon. A text field appears where the name of the file can be entered. Call it call it e.g. "basics.ipynb".
 
-> 💡 Note:  
+> [!NOTE]
 > The `.ipynb` file extension is a Jupyter Notebook file. It is a special file format that allows to create code cells you to create and share documents that contain live code, equations, visualizations and narrative text. It is like a combination of a text editor and a Python interpreter.
 
 ## 2. Wire up a Python environment to the project
@@ -128,9 +128,49 @@ The most important concepts are:
 
 Open one of the websites and read through the content. Type the code yourself and understand what you are doing. Within the notebook that we have created, you can add new code cells by clicking on the `+` button in the top left corner of the notebook. To run a code cell, you can either click on the `Run` button in the top right corner of the cell or press `Shift + Enter`. The output (result) of the code cell will be displayed below the cell.
 
-> 💡 Tipp:
+> [!NOTE]
 > Don't just copy, paste, and run the code. Type it yourself and understand what you are doing. This will help you to remember the code and to understand the concepts better.
 
-> 💡 Tipp:
+> [!NOTE]
 > You can also use the AI assistant on the right side of the screen to ask questions about the code you are writing. Generally writing code is nowadays heavily supported by AI, which can help finding solution and doing simple repetitive code implmentations. However, basic understanding of the code and the concepts is still required to make sure the generated code is correct and does what you want it to do. As a beginner, it is all about finding the right balance between using the AI and understanding the code and the concepts!
+
+## 4. Working with Python packages
+
+Python packages are a way to organize and share / reuse code for a specific purpose. They are installed using the `uv` tool in order to be used in the currently active project. In general, packages only need to be installed once per project. One of the most commonly used packages are:
+- `numpy` for numerical computing
+- `matplotlib` for plotting
+- `pandas` for spreadsheet-like data manipulation
+
+To install these packages, first open a new terminal by naviating to `Terminal` > `New Terminal`. Then enter the following command to install the packages:
+
+```bash
+uv pip install numpy matplotlib pandas
+```
+
+After adding new packages to the environment, Jupyter Notebook needs to be restarted to make the packages available. Therefore, click on the `Kernel` > `Restart Kernel` button in the top right corner of the notebook.
+
+### Use `numpy` a `matplotlib` to plot data
+
+Now, we can use the packages to plot data. For example, to plot the sine function, you can use the following code:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+plt.plot(x, y)
+plt.show()
+```
+
+and also save the plot to a file:
+
+```python
+plt.savefig('sine.png')
+```
+
+Now, you can open the `sine.png` file in the file browser on the left hand side.
+
+> [!NOTE]
+> Try to add the cosine function to the existing plot and add labels to the axes. Think of other ways to manipulate the plot or add additional labels or annotations. To realize these changes you can eighter use the integrated AI-chat, any other chat bot or google how to do it.
 
