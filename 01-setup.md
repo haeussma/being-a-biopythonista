@@ -140,11 +140,12 @@ Python packages are a way to organize and share / reuse code for a specific purp
 - `numpy` for numerical computing
 - `matplotlib` for plotting
 - `pandas` for spreadsheet-like data manipulation
+- `scipy` for scientific computing
 
 To install these packages, first open a new terminal by naviating to `Terminal` > `New Terminal`. Then enter the following command to install the packages:
 
 ```bash
-uv pip install numpy matplotlib pandas
+uv pip install numpy matplotlib pandas scipy
 ```
 
 After adding new packages to the environment, Jupyter Notebook needs to be restarted to make the packages available. Therefore, click on the `Kernel` > `Restart Kernel` button in the top right corner of the notebook.
